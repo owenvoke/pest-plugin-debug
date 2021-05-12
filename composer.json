@@ -12,9 +12,9 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^7.3",
-        "pestphp/pest": "^0.3",
-        "pestphp/pest-plugin": "^0.3",
+        "php": "^7.3|^8.0",
+        "pestphp/pest": "^1.0",
+        "pestphp/pest-plugin": "^1.0",
         "symfony/var-dumper": "^5.1"
     },
     "autoload": {
@@ -30,7 +30,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "0.3.x-dev"
+            "dev-master": "1.x-dev"
         }
     },
     "minimum-stability": "dev",
@@ -40,8 +40,8 @@
         "preferred-install": "dist"
     },
     "scripts": {
-        "lint": "rector process src && php-cs-fixer fix -v",
-        "test:lint": "php-cs-fixer fix -v --dry-run && rector process src --dry-run",
+        "lint": "php-cs-fixer fix -v",
+        "test:lint": "php-cs-fixer fix -v --dry-run",
         "test:types": "phpstan analyse --ansi",
         "test:unit": "pest --colors=always",
         "test": [
